@@ -1,0 +1,385 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: "Inter", sans-serif;
+    text-decoration: none;
+    list-style: none;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 12%;
+}
+
+.logo {
+    color: #141313;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.logo span {
+    color: #FF6D64;
+}
+
+.navlist {
+    display: flex;
+    align-items: center;
+}
+
+.navlist a {
+    color: #141313;
+    font-size: 17px;
+    font-weight: 600;
+    text-transform: capitalize;
+    padding: 10px 20px;
+    transition: all 0.42s;
+}
+
+.navlist a:hover {
+    color: #FF6D64;
+}
+
+.btn-icon {
+    display: flex;
+    align-items: center;
+}
+
+.btn {
+    display: inline-block;
+    font-size: 18px;
+    color: #141313;
+    font-weight: 700;
+    background: transparent;
+    padding: 10px 20px;
+    border: 2px solid #141313;
+    border-radius: 10px;
+    transition: all 0.42s;
+}
+
+.btn:hover {
+    background-color: #141313;
+    color: #FFF;
+}
+
+#menu-icon {
+    font-size: 35px;
+    color: #141313;
+    z-index: 1000;
+    cursor: pointer;
+    margin-left: 10px;
+    display: none;
+}
+
+/*Home*/
+section {
+    padding: 100px 12%;
+}
+
+.home {
+    width: 100%;
+    height: 100vh;
+    background-image: url(../images/BGAvatar.png);
+    background-position: center;
+    background-size: cover;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    align-items: center;
+}
+
+.home-text h3 {
+    color: #FF6D64;
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+.home-text h1 {
+    color: #141313;
+    font-size: 66px;
+    font-weight: 700;
+    line-height: 100px;
+    text-transform: capitalize;
+}
+
+.home-text h4 {
+    color: #141313;
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 700;
+    margin-bottom: 20px;
+    letter-spacing: -0.96px;
+}
+
+.home-text h4 span {
+    color: #FF6D64;
+    font-weight: 400;
+}
+
+.home-text p {
+    max-width: 490px;
+    color: #141313;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 30px;
+    margin: 0 0px 28px;
+}
+
+.social-icon i {
+    color: #FFF;
+    font-size: 20px;
+    height: 40px;
+    width: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #FF6D64;
+    background: #FF6D64;
+    margin-right: 10px;
+    margin-bottom: 40px;
+    border-radius: 10px;
+    transition: all 0.42s;
+}
+
+.social-icon i:hover {
+    background: transparent;
+    color: #FF6D64;
+}
+
+.main-btn {
+    display: flex;
+    align-items: center;
+}
+
+.mn-btn img {
+    width: 20px;
+    height: auto;
+    vertical-align: middle;
+    margin-left: 6px;
+}
+
+.mn-btn {
+    display: inline-block;
+    color: #FFF;
+    font-size: 16px;
+    text-transform: capitalize;
+    font-weight: 500;
+    padding: 10px 20px;
+    background: #141313;
+    border: 2px solid #141313;
+    border-radius: 10px;
+    transition: all 0.42s;
+}
+
+.mn-btn:hover {
+    background: transparent;
+    color: #141313;
+}
+
+.scroll {
+    position: absolute;
+    top: 94%;
+    left: 50%;
+    transform: translateY(-50%);
+    transition: all 0.42s;
+}
+
+.scroll a {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    color: #FF6D64;
+    font-weight: 500;
+}
+
+.scroll i {
+    font-size: 22px;
+    color: #141313;
+}
+
+.scroll:hover {
+    transform: translateY(-4px) scale(1.08);
+}
+
+/*Sticky-header*/
+header.sticky {
+    background: #FFF;
+    padding: 14px 12%;
+    box-shadow: 0px 0px 10px rgb(0 0 0 / 10%);
+    transition: all 0.42s;
+}
+
+/*About*/
+.about-img img {
+    max-width: 100%;
+    width: 375px;
+    height: auto;
+}
+
+.about-center {
+    text-align: center;
+}
+
+.about-center h5 {
+    color: #141313;
+    font-size: 18px;
+    font-weight: 700;
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+.about-center h1 {
+    color: #141313;
+    font-size: 38px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 120px;
+}
+
+.about-center h1 span {
+    color: #FF6D64;
+}
+
+.about-sec {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+    align-items: center;
+    gap: 3rem;
+}
+
+.about-text h6 {
+    max-width: 470px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 28px;
+    padding: 10px 20px;
+    background: #141313;
+    color: #FFF;
+}
+
+hr {
+    border-top: 2px solid #141313;
+    border-radius: 10px;
+    margin: 40px 0;
+}
+
+.experience {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 50px;
+}
+
+.ex2 {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.Ex1 h1 {
+    font-size: 38px;
+    font-weight: 700;
+    letter-spacing: -2.4px;
+    margin-right: 10px;
+}
+
+.ten {
+    color: #FF6D64;
+}
+
+.Ex1 h5 {
+    color: #141313;
+    font-size: 18px;
+    font-style: italic;
+    font-weight: 700;
+}
+
+.Ex1 p {
+    color: #141313;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    margin-bottom: 20px;
+}
+
+/*Services*/
+.serv-center {
+    text-align: center;
+}
+
+.serv-center h1 {
+    color: #141313;
+    font-size: 38px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.serv-center h5 {
+    color: #141313;
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 700;
+    margin-bottom: 100px;
+}
+
+.serv-center h1 span {
+    color: #FF6D64;
+}
+
+.main-serv {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+    align-items: center;
+    gap: 2rem;
+}
+
+.main-serv .serv {
+    padding: 35px 25px;
+    background: #141313;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.42s;
+}
+
+.serv i {
+    color: #FFF;
+    font-size: 45px;
+    margin-bottom: 10px;
+}
+
+.serv h4 {
+    color: #FFF;
+    font-weight: 500;
+    font-size: 20px;
+    text-transform: capitalize;
+    margin-bottom: 10px;
+}
+
+.serv p {
+    color: #C0BBBB;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 25px;
+    margin-bottom: 15px;
+}
+
+.serv-btn a {
+    color: #FF6D64;
+}
+
+.main-serv .serv:hover {
+    transform: translateY(-8px);
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
+/*Work*/
