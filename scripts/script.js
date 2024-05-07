@@ -16,3 +16,5 @@ window.onscroll = () => {
     menu.classList.remove('bx-x');
     navlist.classList.remove('open');
 }
+
+window.innerWidth > 1000 ? this.document.querySelector('.movingImage').setAttribute('id', 'movingImage') : this.document.querySelector('.movingImage').removeAttribute('id');

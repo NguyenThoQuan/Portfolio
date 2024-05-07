@@ -110,6 +110,90 @@ section {
     text-transform: capitalize;
 }
 
+.home-text h1 span {
+    color: #FF6D64;
+}
+
+.text-animation {
+    font-size: 34px;
+    font-weight: 700;
+    min-width: 280px;
+    margin-bottom: 20px;
+}
+
+.text-animation span {
+    position: relative;
+}
+
+.text-animation span::before {
+    content: "Web Developer";
+    color: #FF6D64;
+    animation: words 12s infinite;
+}
+
+.text-animation span::after {
+    content: "";
+    background-color: #FFF;
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    border-left: 3px solid #FFF;
+    right: -8px;
+    animation: cursor 0.6s infinite, typing 20s steps(14) infinite;
+}
+
+@keyframes cursor {
+    to {
+        border-left: 2px solid #FF6D64;
+    }
+}
+
+@keyframes words {
+
+    0%,
+    33% {
+        content: "Web Developer";
+    }
+
+    34%,
+    66% {
+        content: "UI / UX Designer";
+    }
+
+    67%,
+    100% {
+        content: "Mobile App";
+    }
+}
+
+@keyframes typing {
+
+    10%,
+    15%,
+    30%,
+    35%,
+    50%,
+    55%,
+    70%,
+    75%,
+    90%,
+    95% {
+        width: 0;
+    }
+
+    5%,
+    20%,
+    25%,
+    40%,
+    45%,
+    60%,
+    65%,
+    80%,
+    85% {
+        width: calc(100% + 8px);
+    }
+}
+
 .home-text h4 {
     color: #141313;
     font-size: 20px;
@@ -189,6 +273,7 @@ section {
     top: 94%;
     left: 50%;
     transform: translateY(-50%);
+    transform: translateX(-50%);
     transition: all 0.42s;
 }
 
@@ -206,7 +291,7 @@ section {
 }
 
 .scroll:hover {
-    transform: translateY(-4px) scale(1.08);
+    scale: 1.2;
 }
 
 /*Sticky-header*/
@@ -228,19 +313,23 @@ header.sticky {
     max-width: 100%;
     width: 375px;
     height: auto;
-    position: absolute;
+    border-radius: 50%;
+}
+
+#movingImage {
     bottom: 0;
+    position: absolute;
     animation: moveUpDown 2s infinite alternate;
     transition: box-shadow 0.3s ease;
 }
 
 @keyframes moveUpDown {
     0% {
-        transform: translateY(25%);
+        transform: translateY(15%);
     }
 
     100% {
-        transform: translateY(-25%);
+        transform: translateY(-5%);
     }
 }
 
@@ -276,13 +365,15 @@ header.sticky {
 }
 
 .about-text h6 {
-    max-width: 470px;
+    max-width: 100%;
     font-size: 16px;
     font-weight: 500;
     line-height: 28px;
+    text-align: center;
     padding: 10px 20px;
     background: #141313;
     color: #FFF;
+    border-radius: 12px;
 }
 
 hr {
@@ -325,7 +416,7 @@ hr {
 
 .Ex1 p {
     color: #141313;
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 400;
     line-height: 26px;
     margin-bottom: 20px;
@@ -870,6 +961,13 @@ button:hover span {
 
     .about-img {
         text-align: center;
+        margin-top: -20px;
+        margin-left: -55px;
+    }
+
+    .about-img img {
+        width: 175px;
+        height: auto;
     }
 
     .main-contact {
